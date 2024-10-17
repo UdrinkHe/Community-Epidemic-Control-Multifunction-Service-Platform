@@ -1,0 +1,8 @@
+<!--pages/tipPage/tipPage.wxml-->
+<!--提示页-->
+<mp-msg id="mainShower" type="{{topType}}" style="height:{{mainHeight}}">
+  <view id="desc" slot="desc">{{topMsg}}</view>
+  <view id="extend" slot="extend">{{mainMsg}}</view>
+  <view id="handle" slot="handle"><button type="primary" bindtap="tapTonavigator">确定</button></view>
+  <view slot="footer">{{footerMsg}}</view>
+</mp-msg>

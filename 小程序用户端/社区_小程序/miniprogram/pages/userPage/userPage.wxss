@@ -1,0 +1,85 @@
+/* pages/userPage/userPage.wxss */
+#mainBlock
+{
+  width: 700rpx;
+  margin: 0 auto;
+}
+#levelShow
+{
+  margin-top: 10rpx;
+  background-color: rgba(98, 231, 225, 0.9);
+}
+#levelText
+{
+  background: rgba(25, 252, 36, 0.9);
+  padding: 10rpx;
+  border-radius: 5rpx;
+  color: white;
+}
+#baseInfoContainer
+{
+  background-color: rgba(98, 231, 225, 0.9);
+  border-radius:10px;
+  height: 100px;
+  padding-top: 1px;
+}
+#scanButton /*扫一扫功能*/
+{
+  height: 28px;
+  width: 28px;
+  float: right;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+#profileContainer /*头像容器*/
+{
+  border-radius: 10px;
+  height: 80px;
+  width: 80px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#profile /*头像*/
+{
+  width: 100%;
+  border-radius: 10px;
+}
+#blackBlock 
+{
+  width:100%;
+  height:100%;
+  position:fixed;
+  background-color:#999;
+  z-index:9999;
+  top:0;
+  left:0;
+  opacity:0.5;
+}
+#baseInfo
+{
+  background-color: white;
+  margin-top: 39px;
+  text-align: center;
+}
+.classifyText /*分类标题*/
+{
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: 20px;
+}
+.flexContainer/*功能模块分区*/
+{  
+  background-color: white;
+  width: 700rpx;
+  display: flex;
+  border-radius: 5px;
+  margin: 10px auto;
+  flex-wrap: wrap;
+}
+.flexFunctionButton/*功能模块按钮*/
+{
+  width: 175rpx;
+  text-align: center;
+  margin-top: 10px;
+}

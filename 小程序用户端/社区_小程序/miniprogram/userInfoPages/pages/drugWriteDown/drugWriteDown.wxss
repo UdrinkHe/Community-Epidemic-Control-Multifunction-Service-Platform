@@ -1,0 +1,100 @@
+/* userInfoPages/pages/drugWriteDown/drugWriteDown.wxss */
+/*主页面*/
+page{
+  height: 100%;
+}
+/*搜索栏部分*/
+.searchBlock{
+height: 10%;
+background:rgb(212, 240, 245);
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+/*内容部分*/
+.contentBlock
+{
+  display: flex;
+  height: 85%;
+  width: 100%;
+}
+/*选项卡*/
+.chooseTab
+{
+  background:rgb(255, 255, 255);
+  width: 25%;
+  height: 100%;
+}
+.switchTab
+{
+  background-color: rgb(237, 237, 237);
+  text-align: center;
+  font-size: 35rpx;
+  line-height: 100rpx;
+  height: 100rpx;
+}
+.switchTab.active
+{
+  background-color: rgb(255, 255, 255);
+  border-left: green 5px solid;
+}
+/*药品内容*/
+.drugShowView
+{
+  width: 75%;
+  background: rgb(237, 237, 237);
+  height: 100%;
+}
+.contentItem
+{
+  display: flex;
+  padding: 20rpx;
+  background: rgb(255, 255, 255);
+  justify-content: center;
+  height: 170rpx;
+}
+.contentText
+{
+  height: 170rpx;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.numText{
+  display: flex;
+  justify-content: space-between;
+}
+.AddBlock
+{
+  display: flex;
+}
+/*已选药品部分*/
+.choosenDrug{
+  text-align: center;
+  background:rgb(212, 240, 245);
+  height: 5%;
+  width: 100%;
+  border-radius: 25rpx;
+}
+/*购物车样式*/
+::-webkit-scrollbar {
+	display: none;
+}
+.carItem
+{
+  display: flex;
+  justify-content: space-between;
+}
+.carText
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+.carDrugName
+{
+  font-size: 35rpx;
+  font-weight: 900;
+}

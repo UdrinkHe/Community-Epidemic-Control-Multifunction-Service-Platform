@@ -1,0 +1,10 @@
+/* pages/tipPage/tipPage.wxss */
+#desc
+{
+  font-size: 30px;
+  font-weight: 500;
+}
+#mainShower
+{
+  padding-bottom: 100px;
+}

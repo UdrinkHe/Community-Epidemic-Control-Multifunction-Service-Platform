@@ -1,0 +1,3 @@
+<!--pages/indexPage/indexPage.wxml-->
+<!--引导页 菜单页-->
+<index-bar navDataInfo="{{navDataInfo}}"></index-bar>

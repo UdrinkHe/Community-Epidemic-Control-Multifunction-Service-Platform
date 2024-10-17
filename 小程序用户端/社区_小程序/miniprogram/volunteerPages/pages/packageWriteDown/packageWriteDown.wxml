@@ -1,0 +1,25 @@
+<!--volunteerPages/pages/packageWriteDown/packageWriteDown.wxml-->
+<!--记录包裹存放信息-->
+<three-type-tips msgShow="{{tipMsgShow}}" msgType="{{tipMsgType}}"></three-type-tips>
+<view class="titleText">存件信息录入</view>
+<mp-form id="infoWriter">
+          <mp-cells title="收件信息" >
+                <mp-cell title="收件人">
+                  <input placeholder="请输入收件人的备注名" model:value="{{postName}}"/>
+                </mp-cell>
+                <mp-cell title="所属社区">
+                    <view>{{communityName}}</view>
+                </mp-cell>
+                <mp-cell title="收件地址" >
+                    <view>
+                      {{address}}
+                    </view>
+                </mp-cell>
+                <mp-cell title="收件备注">
+                    <view>
+                        <textarea placeholder="请输入相关备注" model:value="{{content}}"></textarea>
+                    </view>
+                </mp-cell>
+            </mp-cells>
+</mp-form>
+<button id="subimit" bindtap="submitPackageInfo" type="primary">提交</button>

@@ -1,0 +1,76 @@
+/* volunteerPages/pages/myPlacesInfo/myPlacesInfo.wxss */
+page{
+  height: 100%;
+}
+.placeItem{
+  background: rgb(170, 183, 224);
+  border-bottom: 3px black solid;
+}
+#selecterContainer
+{
+  position: absolute;
+  width: 750rpx;
+  height: 50rpx;
+  z-index: 3;
+}
+#selecter
+{
+  width: 350rpx;
+  height: 50rpx;
+  background: rgb(214, 211, 211);
+  position: relative;
+  left: 200rpx;
+  display: flex;
+  border-radius: 25rpx;
+}
+#selectContent
+{
+  font-size: 35rpx;
+  line-height: 50rpx;
+  width: 300rpx;
+  text-align: center;
+  border-radius: 25rpx;
+}
+#selectIcon
+{
+  width: 50rpx;
+  border-radius: 25rpx;
+}
+#selectItemBar
+{
+  position: relative;
+  width: 350rpx;
+  background-color: white;
+  left: 200rpx;
+  top: 0rpx;
+}
+.selectItem
+{
+  height: 50rpx;
+  font-size: 35rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-bottom: 2px solid;
+}
+.selectItemChoose
+{
+  height: 50rpx;
+  font-size: 35rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-bottom: 2px solid;
+  background-color: blue;
+}
+#conponentContainer
+{
+  height: calc(100% - 50rpx);
+  width: 100%;
+  background-color: red;
+  margin-top: 50rpx;
+}
+.itemLine{
+  margin-top: 10px;
+}
+.itemLine.firstLine{
+  margin-top: 0;
+}

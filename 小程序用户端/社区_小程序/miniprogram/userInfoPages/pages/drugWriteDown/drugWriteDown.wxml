@@ -1,0 +1,88 @@
+<!--userInfoPages/pages/drugWriteDown/drugWriteDown.wxml-->
+<!--用户登记购药信息-->
+<!--搜索部分-->
+<block wx:if="{{pageShow==1}}">
+<three-type-tips msgShow="{{tipMsgShow}}" msgType="{{tipMsgType}}"></three-type-tips>
+<!--购物车内容-->
+<mp-half-screen-dialog show="{{isdrugCarShow}}" title="药品购物车">
+       <view slot="desc">
+          <view>已选{{drugTypeNum}}件</view>
+       </view>
+       <view slot="footer">
+        <scroll-view id="carContent" style="height: 500rpx;" scroll-y="true">
+              <!--展示已购物品-->
+              <block wx:for="{{drugContent}}" wx:for-index="idA" wx:key="this">
+                  <block wx:for="{{drugContent[idA]}}" wx:for-index="idB" wx:for-item="itemB">
+                    <view class="carItem" wx:if="{{itemB.isChoose}}">
+                      <view class="carImg">
+                        <image src="{{itemB.drugImg?itemB.drugImg:simpleImgUrl}}" style="width: 90rpx;" mode="widthFix"></image>
+                      </view>
+                      <view class="carText">
+                        <view>
+                          <view class="carDrugName">{{itemB.drugName}}</view>
+                          <view wx:if="{{itemB.lessTime>-1}}" style="color: red;">余购数量:{{itemB.lessTime}}</view>
+                        </view>
+                        <view class="AddBlock">
+                            <view style="border-radius: 13rpx;" bindtap="decreaseItem" data-typeindex="{{idA}}" data-itemindex="{{idB}}">
+                              <image src="../../../images/decrease.png" style="width: 40rpx;" mode="widthFix"></image>
+                            </view>
+                            <view style="width: 50rpx; text-align: center;">{{itemB.chooseNum}}</view>
+                            <view style="border-radius: 13rpx;" bindtap="addItem" data-typeindex="{{idA}}" data-itemindex="{{idB}}"> 
+                            <image src="../../../images/add.png" style="width: 40rpx;" mode="widthFix"></image>
+                            </view>
+                            </view>
+                      </view>
+                    </view>
+                  </block>
+              </block>  
+         </scroll-view>
+        <button type="primary" bindtap="submitDrugForm">提交登记</button>
+       </view>
+    </mp-half-screen-dialog>
+<!--商品展示页面-->
+<view class="searchBlock">
+    <mp-searchbar></mp-searchbar>  
+</view>
+<!--内容部分-->
+<view class="contentBlock">
+  <!--药物类型选择-->
+  <scroll-view class="chooseTab">
+    <block wx:for="{{switchTab}}" wx:for-item="itemA" wx:key="key" wx:for-index="idA">
+      <view class="switchTab {{isSwitch==itemA.value?'active':''}}" bindtap="changeSwitchTab" data-value="{{itemA.value}}">
+        {{itemA.name}}</view>
+    </block>
+  </scroll-view>
+  <!--药物种类展示-->
+  <scroll-view class="drugShowView" scroll-y="true">
+    <view class="contentItem" wx:for="{{drugContent[isSwitch-1]}}" wx:key="_id" wx:for-item="itemA" wx:for-index="idA">
+      <view>
+        <image src="{{itemA.drugImg?itemA.drugImg:simpleImgUrl}}" style="width:170rpx;border-radius: 15rpx;" mode="widthFix"></image>
+      </view>
+      <view class="contentText">
+        <view>
+          <view style="font-size:30rpx;font-weight:900;">{{itemA.drugName}}</view>
+          <view wx:if="{{itemA.lessTime>-1}}" style="color: red;">剩余次数:{{itemA.lessTime}}件</view>
+        </view>
+        <view class="numText">
+          <view>限购:{{itemA.limitNum}}件</view>
+          <!--数量添加器-->
+          <view class="AddBlock">
+            <view style="border-radius: 13rpx;" bindtap="decreaseItem" data-itemindex="{{idA}}">
+              <image src="../../../images/decrease.png" style="width: 40rpx;" mode="widthFix"></image>
+            </view>
+            <view style="width: 50rpx; text-align: center;">{{itemA.chooseNum}}</view>
+            <view style="border-radius: 13rpx;" bindtap="addItem" data-itemindex="{{idA}}"> 
+            <image src="../../../images/add.png" style="width: 40rpx;" mode="widthFix"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<!--已选药品部分信息与展开栏-->
+<view class="choosenDrug" bindtap="openCar">
+  查看已选药品
+</view>
+</block>
+

@@ -1,0 +1,7 @@
+<!--components/indexBar/IndexBar.wxml-->
+<!--跳转菜单组件-->
+<mp-cells>
+  <mp-cell wx:for="{{navDataInfo}}"  wx:for-index="idxA" wx:for-item="itemA" wx:key="key" link="true" title="{{itemA.navBarName}}" bindtap="navigateTo" data-navurl="{{itemA.navBarUrl}}">
+    <!-- <image src="{{itemA.iconPath}}" style="width: 20px;vertical-align: middle;" slot="icon" mode="widthFix"></image> -->
+  </mp-cell>
+</mp-cells>

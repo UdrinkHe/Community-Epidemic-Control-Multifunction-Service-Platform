@@ -1,0 +1,6 @@
+<!--userInfoPages/pages/testAddWatch/testAddWatch.wxml-->
+<input model:value="{{name}}"/>
+<input model:value="{{phone}}"/>
+<button bindtap="addOne">添加一条数据</button>
+<button bindtap="closeWatcher">关闭监听者</button>
+<text>{{caozuo}}</text>

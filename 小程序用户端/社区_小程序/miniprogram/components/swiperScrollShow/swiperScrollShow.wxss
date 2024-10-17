@@ -1,0 +1,39 @@
+/* components/swiperScrollShow/swiperScrollShow.wxss */
+.container{
+  width: 100%;
+  background-color: pink;
+  height: 100%;
+}
+.nav {
+  height: 80rpx;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 80rpx;
+  background: #f7f7f7;
+  font-size: 16px;
+  white-space: nowrap;
+}
+.nav-item {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  background: rgb(37, 241, 48);
+}
+.nav-item.active{
+  color: red;
+}
+.tab-box{
+  background: rgb(225, 238, 206);
+  box-sizing: border-box;
+  height: calc(100% - 80rpx);
+}
+.tab-content{
+ height: 100%;
+}
+
+.dataItem
+{
+  border-bottom: 2px black solid;
+  background-color: white;
+}

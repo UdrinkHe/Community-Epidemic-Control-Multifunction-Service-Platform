@@ -1,0 +1,47 @@
+<!--volunteerPages/pages/myPlacesInfo/myPlacesInfo.wxml-->
+<view id="selecterContainer">
+  <view id="selecter" bindtap="showOrhideSelectBar">
+    <view id="selectContent">{{typeName}}</view>
+    <view id="selectIcon"><image src="../../../images/selectArrow.png" style="width: 50rpx;" mode="widthFix"></image></view>
+  </view>
+  <view id="selectItemBar" style="display:{{selectDisplay}};">
+      <view wx:for="{{selectItems}}" wx:for-index="idA" class="{{selectItems[idA].isChoose?'selectItemChoose':'selectItem'}}" wx:key="key" data-queryvalue="{{selectItems[idA].value}}" bindtap="selectThisTypePlaces">--{{selectItems[idA].name}}--</view>
+  </view>
+</view>
+<view id="conponentContainer">
+  <swiper-scroll-show pageType="{{1}}">
+    <view slot="agreePlaces" style="height:100%">
+      <scroll-view scroll-y="{{true}}" style="height:100%;">
+        <block wx:for="{{agreePlace}}" wx:for-item="itemA" wx:key="_id">
+          <view bindtap="navTo" class="placeItem" data-placeid="{{itemA._id}}">
+            <view class="itemLine firstLine">地点名:{{itemA.address}}</view>
+            <view class="itemLine">所属社区:{{communityName}}</view>
+            <view class="itemLine">申请时间:{{itemA.applyTime}}</view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+    <view slot="applyingPlaces" style="height:100%">
+      <scroll-view scroll-y="true" style="height:100%;">
+        <block wx:for="{{applyingPlace}}" wx:for-item="itemA" wx:key="_id">
+          <view class="placeItem">
+            <view class="itemLine firstLine">地点名:{{itemA.address}}</view>
+            <view class="itemLine">所属社区:{{communityName}}</view>
+            <view class="itemLine">申请时间:{{itemA.applyTime}}</view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+    <view slot="disagreePlaces" style="height:100%">
+      <scroll-view scroll-y="true" style="height:100%;">
+        <block wx:for="{{disagreePlace}}" wx:for-item="itemA" wx:key="_id">
+          <view class="placeItem">
+            <view class="itemLine firstLine">地点名:{{itemA.address}}</view>
+            <view class="itemLine">所属社区:{{communityName}}</view>
+            <view class="itemLine">申请时间:{{itemA.applyTime}}</view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </swiper-scroll-show>
+</view>

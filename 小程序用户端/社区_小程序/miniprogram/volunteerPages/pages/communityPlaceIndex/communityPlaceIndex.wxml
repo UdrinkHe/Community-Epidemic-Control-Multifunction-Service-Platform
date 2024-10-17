@@ -1,0 +1,7 @@
+<!--volunteerPages/pages/communityPlaceIndex/communityPlaceIndex.wxml-->
+<!--选择前往地点上报还是以上报地点查看-->
+<mp-cells>
+  <block wx:for="{{communityIndexs}}" wx:key="key" wx:for-index="idx">
+    <mp-cell data-navurl="{{communityIndexs[idx].navigateTo}}" bindtap="navigateTo" link="{{true}}">{{communityIndexs[idx]["name"]}}</mp-cell>
+  </block>
+</mp-cells>

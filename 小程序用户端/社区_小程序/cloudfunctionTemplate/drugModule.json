@@ -1,0 +1,14 @@
+[
+  {
+    "name": "添加一个药品",
+    "value": {
+      "type": "addADrug",
+      "queryData": {
+        "drugType": 1,
+        "drugName": "板蓝根",
+        "drugImg": null,
+        "limitNum": 2
+      }
+    }
+  }
+]

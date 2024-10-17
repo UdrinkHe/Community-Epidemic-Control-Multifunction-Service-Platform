@@ -1,0 +1,8 @@
+/* userInfoPages/pages/userInfoWriteDown/userInfoWriteDown.wxss */
+.flex_slot{
+  display: flex;
+}
+.radioView{
+  margin-top: 20px;
+  text-align: left;
+}

@@ -1,0 +1,15 @@
+/* volunteerPages/pages/packageWriteDown/packageWriteDown.wxss */
+.titleText{
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+  background: rgb(193, 255, 180);
+}
+#infoWriter
+{
+  margin-top: 50px;
+}
+#subimit
+{
+  margin-top: 30px;
+}

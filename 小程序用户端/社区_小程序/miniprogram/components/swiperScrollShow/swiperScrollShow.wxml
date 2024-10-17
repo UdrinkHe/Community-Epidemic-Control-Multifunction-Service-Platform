@@ -1,0 +1,33 @@
+<!--components/swiperScrollShow/swiperScrollShow.wxml-->
+<!--该组件可以用于展示多类型的数据，结合swiper和scrollView-->
+  <view class="container" >
+    <!-- tab导航栏 -->
+    <!-- scroll-left属性可以控制滚动条位置 -->
+    <!-- scroll-with-animation滚动添加动画过渡 -->
+    <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+        <block wx:for="{{navData[pageType-1]}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+            <view class="nav-item {{currentTab == idx ?'active':''}}"  data-current="{{idx}}" bindtap="switchNav">{{navItem.text}}</view>
+        </block>        
+    </scroll-view>
+    <!-- 页面内容 按照使用的展示页面类型区分-->
+    <swiper class="tab-box" current="{{currentTab}}" style="height:'100vh';" bindchange="switchTab">
+        <!--查看数据:场地信息-->
+        <block wx:if="{{pageType==1}}">
+            <swiper-item class="tab-content">
+              <!--此处将查询到的内容遍历出来-->
+                <slot name="agreePlaces"></slot>
+            </swiper-item>
+            <swiper-item class="tab-content">
+              <!--此处将查询到的内容遍历出来-->
+                <slot name="applyingPlaces"></slot>
+            </swiper-item>
+            <swiper-item class="tab-content">
+              <!--此处将查询到的内容遍历出来-->
+              <slot name="disagreePlaces"></slot>
+            </swiper-item>
+        </block>        
+    </swiper>
+</view>
+
+
+

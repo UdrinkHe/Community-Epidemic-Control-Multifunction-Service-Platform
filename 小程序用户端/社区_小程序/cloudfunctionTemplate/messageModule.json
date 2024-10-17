@@ -1,0 +1,34 @@
+[
+  {
+    "name": "社区通知添加模板",
+    "value": {
+      "type": "addANotice",
+      "queryData": {
+        "communityId": "114115",
+        "noticeContent": "123",
+        "noticeWriter": "1148370650",
+        "createTime": 1231,
+        "lastTime": 1231,
+        "noticeTitle": "1231"
+      }
+    }
+  },
+  {
+    "name": "根据用户id查询当前所有可见的社区通知",
+    "value": {
+      "type": "getAllCommunityNoticeByUser",
+      "queryData": {
+        "openId": "S"
+      }
+    }
+  },
+  {
+    "name": "查询一篇文章的社区内人员阅读情况",
+    "value": {
+      "type": "selectHasReadMan",
+      "queryData": {
+        "noticeId": "0ab5303b627029fc012b6a65703f0ec4"
+      }
+    }
+  }
+]

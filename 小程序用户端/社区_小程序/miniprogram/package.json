@@ -1,0 +1,20 @@
+{
+  "name": "miniprogram",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.1.1",
+    "miniprogram-sm-crypto": "^0.3.7",
+    "qrcode": "^1.5.0",
+    "weui-miniprogram": "^1.2.3"
+  },
+  "devDependencies": {},
+  "description": ""
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "name": "根据openid查询个人信息",
+    "value": {
+      "type": "selectPersonalInfo",
+      "queryData": {
+        "openId": "oQyxP405-yJng4dguUliI2g-boIA"
+      }
+    }
+  }
+]

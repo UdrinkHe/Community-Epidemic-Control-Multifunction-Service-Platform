@@ -1,0 +1,34 @@
+[
+  {
+    "name": "翠鹏社区药品查询测试",
+    "value": {
+      "type": "selectAllDrugByCommunityId",
+      "queryData": {
+        "communityId": "114115"
+      }
+    }
+  },
+  {
+    "name": "查询一次详细的购药结果",
+    "value": {
+      "type": "showMainDrugRecord",
+      "queryData": {
+        "recordId": "8f75309d626dcba100e410837cb0f467"
+      }
+    }
+  },
+  {
+    "name": "添加药品测试",
+    "value": {
+      "type": "addADrug",
+      "queryData": {
+        "drugType": 0,
+        "drugName": "1",
+        "drugImg": "2",
+        "limitNum": 0,
+        "communityId": "1",
+        "content": "1"
+      }
+    }
+  }
+]

@@ -1,0 +1,41 @@
+<!--pages/userPage/userPage.wxml-->
+<view id="mainBlock">
+<view id="blackBlock" wx:if="{{firstLoading}}"></view>
+<three-type-tips msgShow="{{tipMsgShow}}" msgType="{{tipMsgType}}"></three-type-tips>
+<view id="baseInfoContainer">
+  <view id="scanButton" bindtap="toScanCode">
+    <image style="width: 20px;" src="{{scanCodeImgUrl}}" mode="widthFix"></image>
+  </view>
+<view id="profileContainer">
+<image bindtap="checkOpenId" id="profile" mode="widthFix" src="{{touxiangUrl}}"></image>
+</view>
+<view id="baseInfo">
+  <block wx:if="{{isLogin==1}}">
+    <view>{{userName}}</view>
+    <view id="levelShow"><text id="levelText">{{levelShowStr}}</text></view>
+  </block>
+  <block wx:else>
+    <text>您还未登录，请点击按钮登录</text>
+    <button  type="primary" bindtap="loginAndGetUserInfo">登录</button>
+  </block>
+</view>
+</view>
+<view class="classifyText">基本信息</view>
+<mp-cells>
+  <mp-cell wx:for="{{personalInfoNav}}"  wx:for-index="idxA" wx:for-item="itemA" wx:key="NavBarKey" link="true" title="{{itemA.NavBarName}}" bindtap="navigateTo" data-navurl="{{itemA.NavBarFunction}}">
+    <image src="{{itemA.iconPath}}" style="width: 20px;vertical-align: middle;" slot="icon" mode="widthFix"></image>
+  </mp-cell>
+</mp-cells>
+<!--弹性布局功能分区-->
+<block wx:for="{{FunctionBlock}}" wx:for-index="idxA" wx:for-item="itemA" wx:key="keyName">
+  <view class="classifyText">{{itemA.name}}</view>
+  <view class="flexContainer">
+    <block wx:for="{{itemA.functions}}" wx:for-index="idxB" wx:for-item="itemB" wx:key="functionKey" wx:if="{{itemB.allCanUse||userInfoLevel==4}}">
+      <view class="flexFunctionButton" data-navurl="{{itemB.functionTap}}" bindtap="navigateTo">
+      <image clss="flexFunctionIcon" style="width: 80rpx" mode="widthFix" src='{{itemB.functionImg}}'></image>
+      <view class="flexFunctionName">{{itemB.functionName}}</view>
+      </view>
+    </block>
+  </view>
+</block>
+</view>

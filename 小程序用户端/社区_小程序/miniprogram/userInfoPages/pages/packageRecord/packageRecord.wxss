@@ -1,0 +1,79 @@
+/* userInfoPages/pages/packageRecord/packageRecord.wxss */
+#selecterContainer
+{
+  position: absolute;
+  width: 750rpx;
+  height: 50rpx;
+  z-index: 3;
+}
+#selecter
+{
+  width: 350rpx;
+  height: 50rpx;
+  background: rgb(214, 211, 211);
+  position: relative;
+  left: 200rpx;
+  display: flex;
+  border-radius: 25rpx;
+}
+#selectContent
+{
+  font-size: 35rpx;
+  line-height: 50rpx;
+  width: 300rpx;
+  text-align: center;
+  border-radius: 25rpx;
+}
+#selectIcon
+{
+  width: 50rpx;
+  border-radius: 25rpx;
+}
+#selectItemBar
+{
+  position: relative;
+  width: 350rpx;
+  background-color: white;
+  left: 200rpx;
+  top: 0rpx;
+}
+.selectItem
+{
+  height: 50rpx;
+  font-size: 35rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-bottom: 2px solid;
+}
+.selectItemChoose
+{
+  height: 50rpx;
+  font-size: 35rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-bottom: 2px solid;
+  background-color: blue;
+}
+#mainContainer{
+  width: 100%;
+  background: rgb(174, 255, 244);
+}
+#recordContainer{
+  width: 95%;
+  margin-top: 55rpx;
+  margin-left: 18.75rpx;
+  height: calc(100vh - 55rpx);
+  background:rgba(236, 236, 236,0.2);
+}
+.itemContainer{
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 10rpx;
+  margin-top: 10px;
+}
+.firstContainer{
+  font-size: 22rpx;
+}
+.textContainer{
+  font-size: 30rpx;
+}

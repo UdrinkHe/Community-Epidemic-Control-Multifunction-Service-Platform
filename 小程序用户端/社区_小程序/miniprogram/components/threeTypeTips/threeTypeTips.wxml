@@ -1,0 +1,5 @@
+<!--components/threeTypeTips/threeTypeTips.wxml-->
+<!--三种提示框组件-->
+<mp-toptips msg="{{errMsg}}" type="error" show="{{errMsgShow}}" delay="2000"></mp-toptips>
+<mp-toptips msg="{{successMsg}}" type="success" show="{{successMsgShow}}" delay="2000"></mp-toptips>
+<mp-toptips msg="{{infoMsg}}" type="info" show="{{infoMsgShow}}" delay="2000"></mp-toptips>

@@ -1,0 +1,126 @@
+<!--userInfoPages/pages/userInfoWriteDown/userInfoWriteDown.wxml-->
+<!--三种类型的提示toptips-->
+<three-type-tips msgShow="{{tipMsgShow}}" msgType="{{tipMsgType}}"></three-type-tips>
+<block wx:if="{{dataRecordLevel==0}}">
+<!--身份证类型的选择框-->
+    <mp-dialog show="{{identityTypeShow}}" mask-closable="{{false}}" buttons="{{identityDialogButtons}}"  bindbuttontap="tapDialogIdentityButton">
+        <view>
+        证件类型-单选
+            <radio-group bindchange="changeMyIdentityType">
+                <view class="radioView" wx:for="{{identityCardTypeItems}}" wx:key="name">
+                    <radio value="{{item.name}}">{{item.text}}</radio>
+                </view>
+            </radio-group>
+        </view>
+    </mp-dialog>
+    <!--用户初次登记信息---条款相关-->
+    <mp-half-screen-dialog show="{{!isUserAgree}}" title="用户信息登记条款" id="userDetailA">
+       <view slot="desc">
+            <view>用户条款内容：略</view>
+            <checkbox model:checked="{{queryCanUse}}">我已经阅读并同意上述隐私条款</checkbox>
+            <button type="primary" bindtap="readQuery" disabled="{{!queryCanUse}}">确定</button>
+       </view>
+    </mp-half-screen-dialog>
+    <!--填写的表单-->
+    <mp-form-page title="个人资料登记">
+        <view slot="title">个人信息登记</view>
+        <mp-form>
+        <mp-cells title="基本信息">
+            <mp-cell title="姓名">
+                <view>
+                    <input placeholder="请输入您的姓名" model:value="{{baseInfoName}}" />
+                </view>
+            </mp-cell>
+            <mp-cell title="证件类型" link="{{true}}" bindtap="IdendtitydialogShow">
+                <view>{{identityCardType}}</view>
+            </mp-cell>
+            <mp-cell title="证件号码">
+                <view>
+                    <input placeholder="请输入您的证件号码"  model:value="{{baseInfoIdentityCardId}}"/>
+                </view>
+            </mp-cell>
+            <mp-cell title="手机号">
+                <view>
+                    <input placeholder="请输入您的手机号"  model:value="{{baseInfoPhone}}"/>
+                </view>
+            </mp-cell>
+            <mp-cell title="验证码">
+                <view>
+                    <input placeholder="验证码" model:value="{{testCodeValue}}" />
+                </view>
+                <view slot="footer">
+                    <button type="primary" style="padding-left:0;padding-right:0;width: 200rpx;font-size: 30rpx;" bindtap="CheckAgreeAndSendCode">{{sendButtonText}}</button>
+                </view>
+            </mp-cell>
+        </mp-cells>
+        </mp-form> 
+        <!--点击绑定个人信息-->
+        <button type="primary" bindtap="bindPersonalInfo">确定</button>
+    </mp-form-page>
+   
+</block>
+<block wx:elif="{{dataRecordLevel==1}}">
+<!--用户登记过个人基本信息了 现在需要添加住址信息-->
+    <!--用于更改职业类型的对话框-->
+    <mp-dialog id="occupationChoose" mask-closable="{{false}}"
+    buttons="{{occupationDialogButtons}}" show="{{dialogShow}}" bindbuttontap="tapDialogButton">
+        <view>
+        职业
+            <radio-group bindchange="changeMyOccupation">
+                <block wx:for="{{occupationTypes}}" wx:key="occupationName" wx:for-item="itemA">
+                    <view class="radioView">
+                        <radio value="{{itemA.occupationName}}">{{itemA.occupationName}}</radio>
+                    </view>
+                </block>
+            </radio-group>
+        </view>
+    </mp-dialog>
+    <mp-form-page title="个人资料填写">
+        <view slot="title">个人信息登记</view>
+        <mp-form>
+            <mp-cells title="常住地址" >
+                <mp-cell title="基本地址">
+                    <view>{{baseAddress}}</view>
+                </mp-cell>
+                <mp-cell title="所属社区">
+                    <view>{{myCommunityName}}</view>
+                </mp-cell>
+                <mp-cell title="详细地址">
+                    <view>
+                        <input placeholder="请输入详细门牌号" model:value="{{extraAddress}}"/>
+                    </view>
+                </mp-cell>
+                <mp-cell title="收件备注">
+                    <view>
+                        <input placeholder="请输入收件人的备注名" model:value="{{postName}}"/>
+                    </view>
+                </mp-cell>
+            </mp-cells>
+            <mp-cells title="工作情况">
+                <mp-cell title="职业">
+                    <view bindtap="showOccupationDialog">{{myOccupation}}</view>
+                </mp-cell>
+                <mp-cell title="单位名称">
+                <input placeholder="请输入你的单位" disabled="{{!hasWorkAddress}}" model:value="{{workPlaceName}}"/>
+                </mp-cell>
+                <mp-cell title="单位省市区">
+                        <picker mode="region" bindchange="bindRegionChange" value="{{workRegion}}" custom-item="{{customItem}}" level="sub-district" data-type="work" disabled="{{!hasWorkAddress}}">
+                        <view class="picker">
+                        {{workRegion[0]}}-{{workRegion[1]}}-{{workRegion[2]}}-{{workRegion[3]}}
+                        </view>
+                        </picker>
+                </mp-cell>
+            </mp-cells>
+        </mp-form>
+        <button type="primary" bindtap="ChangePersonalInfo">提交</button>
+    </mp-form-page>
+</block>
+<block wx:elif="{{dataRecordLevel==2}}">
+    <view>您已经提交过正在审核的信息了！</view>
+</block>
+<block wx:elif="{{dataRecordLevel==3}}">
+    <view>您已经完成全程信息登记！</view>
+</block>
+<block wx:elif="{{dataRecordLevel==4}}">
+    <view>您已经完成全程信息登记！</view>
+</block>

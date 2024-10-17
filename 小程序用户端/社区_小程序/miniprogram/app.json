@@ -1,0 +1,86 @@
+{
+  "pages": [
+    "pages/userPage/userPage",
+    "pages/mainPage/mainPage",
+    "pages/tipPage/tipPage",
+    "pages/indexPage/indexPage"
+  ],
+  "subPackages": [
+    {
+      "root": "userInfoPages",
+      "pages": [
+        "pages/testAddWatch/testAddWatch",
+        "pages/userInfoWriteDown/userInfoWriteDown",
+        "pages/personalInfoShow/personalInfoShow",
+        "pages/drugWriteDown/drugWriteDown",
+        "pages/drugRecord/drugRecord",
+        "pages/packageRecord/packageRecord",
+        "pages/searchTestPlace/searchTestPlace",
+        "pages/showPersonalCode/showPersonalCode",
+        "pages/mainDrugRecord/mainDrugRecord",
+        "pages/noticeMain/noticeMain"
+      ]
+    },
+    {
+      "root": "volunteerPages",
+      "pages": [
+        "pages/communityPlaceSubmit/communityPlaceSubmit",
+        "pages/myPlaceInfo/myPlaceInfo",
+        "pages/placeInfoShow/placeInfoShow",
+        "pages/communityPlaceIndex/communityPlaceIndex",
+        "pages/testWriteDown/testWriteDown",
+        "pages/packageWriteDown/packageWriteDown",
+        "pages/myPlacesInfo/myPlacesInfo"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list":[
+      {
+        "pagePath": "pages/mainPage/mainPage",
+        "text":"社区通知",
+        "iconPath": "images/tab/messageInfo.png",
+        "selectedIconPath": "images/tab/messageInfo-active.png"
+      },
+      {
+        "pagePath": "pages/userPage/userPage",
+        "text":"个人中心",
+        "iconPath": "images/tab/userPage.png",
+        "selectedIconPath": "images/tab/userPage-active.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "mp-dialog": "miniprogram_npm/weui-miniprogram/dialog/dialog",
+    "mp-form":"miniprogram_npm/weui-miniprogram/form/form",
+    "mp-bar":"miniprogram_npm/weui-miniprogram/navigation-bar/navigation-bar",
+    "mp-searchbar":"miniprogram_npm/weui-miniprogram/searchbar/searchbar",
+    "mp-cell":"miniprogram_npm/weui-miniprogram/cell/cell",
+    "mp-cells":"miniprogram_npm/weui-miniprogram/cells/cells",
+    "mp-form-page":"miniprogram_npm/weui-miniprogram/form-page/form-page",
+    "mp-toptips":"miniprogram_npm/weui-miniprogram/toptips/toptips",
+    "mp-half-screen-dialog":"miniprogram_npm/weui-miniprogram/half-screen-dialog/half-screen-dialog",
+    "mp-loading":"miniprogram_npm/weui-miniprogram/loading/loading",
+    "mp-checkbox":"miniprogram_npm/weui-miniprogram/checkbox/checkbox",
+    "mp-checkbox-group":"miniprogram_npm/weui-miniprogram/checkbox-group/checkbox-group",
+    "mp-msg":"miniprogram_npm/weui-miniprogram/msg/msg",
+    "mp-tabbar":"miniprogram_npm/weui-miniprogram/tabbar/tabbar",
+    "swiper-scroll-show":"components/swiperScrollShow/swiperScrollShow",
+    "index-bar":"components/indexBar/IndexBar",
+    "three-type-tips":"components/threeTypeTips/threeTypeTips"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "需要打开用户位置"
+    }
+  }
+}

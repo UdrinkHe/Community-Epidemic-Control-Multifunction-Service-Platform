@@ -1,0 +1,54 @@
+<!--userInfoPages/pages/personalInfoShow/personalInfoShow.wxml-->
+<!--个人信息页面-->
+<view id="mainContainer">
+  <view id="baseInfoShow" class="sonBlockContent">
+    <view>
+      <text class="TitleText">基本信息</text>
+    </view>
+    <view class="listItem">
+       <text class="secondTitleText">姓名:</text>{{personalInfo.baseInfo.name}}
+    </view>
+    <view class="listItem">
+       <text class="secondTitleText">性别:</text>{{personalInfo.baseInfo.inhabitantSex}}
+    </view>
+    <view class="listItem">
+       <text class="secondTitleText">证件类型:</text>{{personalInfo.baseInfo.identityCardType}}
+    </view>
+    <view class="listItem">
+       <text class="secondTitleText">证件号码:</text>{{personalInfo.baseInfo.identityCardId}}
+    </view>
+    <view class="listItem">
+       <text class="secondTitleText">手机号:</text>{{personalInfo.baseInfo.phone}}
+    </view>
+  </view>
+  <view id="applyInfoShow" class="sonBlockContent">
+    <text class="TitleText">社区报备信息</text>
+    <view class="listItem">
+       <text class="secondTitleText">所属社区:</text>{{personalInfo.communityInfo[0].name}}
+    </view>
+    <view class="listItem">
+       <text class="secondTitleText">住址:</text>{{personalInfo.address}}
+    </view>
+    <view class="listItem">
+       <text class="secondTitleText">社区信息等级:</text>{{personalInfo.personalInfoStatus}}
+    </view>
+    <view class="listItem">
+       <text class="secondTitleText">取件备注名:</text>{{personalInfo.postName}}
+    </view>
+    <view class="listItem">
+       <text class="secondTitleText">工作类型:</text>{{personalInfo.workType}}
+    </view>  
+    <view class="listItem">
+       <text class="secondTitleText">工作地:</text>{{personalInfo.workRegion}}
+    </view>
+    <view class="listItem">
+       <text class="secondTitleText">单位名称:</text>{{personalInfo.workPlaceName}}
+    </view>
+  </view>
+    <view class="listItem">
+       <text class="secondTitleText">申报时间:</text>{{personalInfo.applyingTime}}
+    </view>
+    <view class="listItem">
+       <text class="secondTitleText">数据更新于:</text>{{personalInfo.lastUpdateTime}}
+    </view>
+</view>

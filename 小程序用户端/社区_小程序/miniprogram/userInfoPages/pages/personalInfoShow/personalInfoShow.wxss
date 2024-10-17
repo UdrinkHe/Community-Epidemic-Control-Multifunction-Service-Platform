@@ -1,0 +1,27 @@
+/* userInfoPages/pages/personalInfoShow/personalInfoShow.wxss */
+#mainContainer
+{
+  width: 700rpx;
+  margin-left: 25rpx;
+}
+.sonBlockContent
+{
+  padding: 10rpx;
+  background: #ffffff;
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+}
+.TitleText
+{
+  font-size: 50rpx;
+  font-weight: 900;
+}
+.listItem
+{
+  margin-top: 15rpx;
+  font-size: 35rpx;
+}
+.secondTitleText
+{
+  font-size: 35rpx;
+}

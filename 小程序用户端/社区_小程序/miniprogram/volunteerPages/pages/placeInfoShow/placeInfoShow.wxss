@@ -1,0 +1,57 @@
+/* volunteerPages/pages/placeInfoShow/placeInfoShow.wxss */
+#mainView
+{
+  background-color: rgb(87, 255, 21);
+  display: flex;
+  align-items: center;
+}
+
+#contentContainer
+{
+  text-align: center;
+  width: 720rpx;
+  margin-left: 15rpx;
+  background-color: white;
+}
+#topBlock{
+  background-color: turquoise;
+  border-radius: 5rpx;
+}
+#firstTitle
+{
+  font-size: 40px;
+  color: white;
+}
+#placeName
+{
+  margin-top: 30px;
+  font-size: 25px;
+}
+#codeShowerContainer
+{
+  width: 500rpx; height: 500rpx;margin-left: 125rpx; background:pink;padding-top: 1rpx;margin-top: 20px;
+}
+#codeShower
+{
+  width: 450rpx; height: 450rpx;margin-top: 24rpx;margin-left: 25rpx;
+}
+#tiptextOne
+{
+  color: white;
+  width: 650rpx;
+  margin-left: 35rpx;
+}
+#tiptextTwo
+{
+  margin-top: 10px;
+  color: red;
+}
+#secondTitle{
+color: turquoise;
+font-size: 25px;
+}
+#tipBlock
+{
+  background-color: turquoise;
+  border-radius: 5rpx;
+}

@@ -1,0 +1,24 @@
+<!--volunteerPages/pages/placeInfoShow/placeInfoShow.wxml-->
+<!--该页面为场所码展示页面-->
+<view id="mainView" style="height: {{mainHeight}};">
+  <view id="contentContainer" style="margin-top:{{contentCenterPX}}">
+  <view id="topBlock">
+    <view id="firstTitle">{{communityName}}场所码</view>
+  </view>
+  <view id="buttomBlock">
+    <view id="placeName">{{placeName}}</view>
+    <view>
+      <view id="codeShowerContainer">
+        <canvas canvas-id="codeShower" id="codeShower"></canvas>
+      </view>
+    </view>
+    <view id="secondTitle">【{{placeType}}】</view>
+    <view>----------------------</view>
+    <view id="tipBlock">
+      <view id="tiptextOne">{{tiptext}}</view>
+      <view id="tiptextTwo">此码长期有效，可截图使用</view>
+    </view>
+  </view>
+  </view>
+</view>
+

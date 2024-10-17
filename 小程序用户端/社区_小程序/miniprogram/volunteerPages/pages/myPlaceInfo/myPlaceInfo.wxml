@@ -1,0 +1,61 @@
+<!--volunteerPages/pages/myPlaceInfo/myPlaceInfo.wxml-->
+<view id="placeContent" style="height:{{maxHeight}};margin-left: {{contentMargin}}rpx;" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE">
+    <scroll-view class="placeSon" id="placeSonF" scroll-y="true">
+      <view class="placeItem" id="{{idx==0?'itemFirst':null}}" catchtap="navTo"  wx:for="{{placeInfoAgree}}" wx:for-index="idx"  wx:for-item="itemA" data-navid="{{itemA._id}}" wx:key="_id">
+        <view>地址:{{itemA.address}}</view>
+        <view>场所类型:{{placeTypeNames[itemA.type-1]}}</view>
+        <view>所属社区:{{communityName}}</view>
+        <!--附加信息-->
+        <block wx:if="{{itemA.extraInfo.length!=0}}">
+        <view>
+        附加信息
+          <view wx:for="{{item.extraInfo}}">
+          </view>
+        </view>  
+        </block>
+        <view>上报时间:{{itemA.applyTime}}</view>
+        <view>通过时间:{{itemA.agreeTime}}</view>
+        <view>状态:{{status[itemA.status+1]}}</view>
+      </view>
+    </scroll-view>
+    <scroll-view class="placeSon" scroll-y="true">
+      <view class="placeItem" id="{{idx==0?'itemFirstz':null}}"   wx:for="{{placeInfoApplying}}" wx:for-index="idx"  wx:for-item="itemA"  wx:key="_id">
+        <view>地址:{{itemA.address}}</view>
+        <view>场所类型:{{placeTypeNames[itemA.type-1]}}</view>
+        <view>所属社区:{{communityName}}</view>
+        <!--附加信息-->
+        <block wx:if="{{itemA.extraInfo.length!=0}}">
+        <view>
+         附加信息
+          <view wx:for="{{item.extraInfo}}">
+          </view>
+        </view>  
+        </block>
+        <view>上报时间:{{itemA.applyTime}}</view>
+        <view>状态:{{status[itemA.status+1]}}</view>
+      </view>
+    </scroll-view>
+</view>  
+<view id="placeBlock"></view>
+<view id="selecterContainer">
+  <view id="selecter" bindtap="showOrhideSelectBar">
+    <view id="selectContent">{{typeName}}</view>
+    <view id="selectIcon"><image src="../../../images/selectArrow.png" style="width: 50rpx;" mode="widthFix"></image></view>
+  </view>
+  <view id="selectItemBar" style="display:{{selectDisplay}};">
+      <view wx:for="{{selectItems}}" wx:for-index="idA" class="{{selectItems[idA].isChoose?'selectItemChoose':'selectItem'}}" wx:key="key" data-queryvalue="{{selectItems[idA].value}}" bindtap="selectThisTypePlaces">--{{selectItems[idA].name}}--</view>
+  </view>
+</view>
+
+<view id="contentContainer">
+  <view class="flexBar">
+  <view id="itemContainer">
+    <view class="barItem" id="firstBarItem">已通过</view>
+    <view class="barItem">审核中</view>
+    <view id="totalBar">
+      <view id="sonBar" style="margin-left: {{tarMargin}}rpx;"></view>
+    </view>
+  </view>
+  </view>
+</view>
+

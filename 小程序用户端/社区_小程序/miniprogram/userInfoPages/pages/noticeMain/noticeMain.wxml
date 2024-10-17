@@ -1,0 +1,9 @@
+<!--userInfoPages/pages/noticeMain/noticeMain.wxml-->
+<view id="outerContainer" style="height:{{maxHeight}};">
+  <three-type-tips msgShow="{{tipMsgShow}}" msgType="{{tipMsgType}}"></three-type-tips>
+  <view id='noticeTitle'>{{textTitle}}</view>
+  <scroll-view id="contentContainer" style="width:95%;background:white;margin: 0 auto;" scroll-y="true">
+    <rich-text nodes="{{nodeText}}"></rich-text>
+  </scroll-view>
+  <button type="primary" disabled="{{isRead?true:false}}" bindtap="haveRead">{{isRead?"已阅读":"我已阅读通知"}}</button>
+</view>

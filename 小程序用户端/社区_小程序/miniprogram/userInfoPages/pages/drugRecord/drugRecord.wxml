@@ -1,0 +1,16 @@
+<!--userInfoPages/pages/drugRecord/drugRecord.wxml-->
+<!--用户查看购药记录-->
+<view class="mainContainer" style="height: {{maxHeight}};">
+  <three-type-tips msgShow="{{tipMsgShow}}" msgType="{{tipMsgType}}"></three-type-tips>
+  <scroll-view id="itemContainer" scroll-y="true">
+    <block wx:for="{{drugRecordList}}" wx:for-item="itemA">
+      <view class="drugRecordShow" data-entranceid="{{itemA.entranceId}}" bindtap="toMainRecordPage">
+          <view class="itemLine">购药地点:{{itemA.addressName}}</view>
+        <view>
+          <view class="itemLine">购药时间：{{itemA.recordTime}}</view>
+          <view class="itemLine">购药社区:{{itemA.communityName}}</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

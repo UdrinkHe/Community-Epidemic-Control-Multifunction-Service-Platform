@@ -1,0 +1,122 @@
+{
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "用户信息",
+          "pathName": "userInfoPages/pages/personalInfoShow/personalInfoShow",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "购药信息填写",
+          "pathName": "userInfoPages/pages/drugWriteDown/drugWriteDown",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "userInfoPages/pages/drugWriteDown/drugWriteDown",
+          "query": "communityId=114115",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/tipPage/tipPage",
+          "query": "MsgInfoEvent=drugAddSuccess",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "商店购药测试",
+          "pathName": "userInfoPages/pages/drugWriteDown/drugWriteDown",
+          "query": "baseAddress=%E5%B9%BF%E4%B8%9C%E7%9C%81%E6%B7%B1%E5%9C%B3%E5%B8%82%E7%BD%97%E6%B9%96%E5%8C%BA%E4%B8%9C%E6%B9%96%E8%A1%97%E9%81%93%E5%8D%97%E8%8B%91%E5%A4%A7%E8%8D%AF%E6%88%BF&communityName=%E7%BF%A0%E9%B9%8F%E7%A4%BE%E5%8C%BA&communityId=114115&placeId=f1dedd58625eda46009d5b6675c37bb1",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "volunteerPages/pages/myPlacesInfo/myPlacesInfo",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "购药记录一览",
+          "pathName": "userInfoPages/pages/drugRecord/drugRecord",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "查询已有的一个详细的购药记录",
+          "pathName": "userInfoPages/pages/mainDrugRecord/mainDrugRecord",
+          "query": "recordId=8f75309d626dcba100e410837cb0f467",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/mainPage/mainPage",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "文章详情",
+          "pathName": "userInfoPages/pages/noticeMain/noticeMain",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "社区工作者录入包裹记录",
+          "pathName": "volunteerPages/pages/packageWriteDown/packageWriteDown",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "volunteerPages/pages/packageWriteDown/packageWriteDown",
+          "query": "placeId=807102f66253d9c405d6499c457bd368",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "取物记录一览",
+          "pathName": "userInfoPages/pages/packageRecord/packageRecord",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "用户取件码查看",
+          "pathName": "userInfoPages/pages/showPersonalCode/showPersonalCode",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "projectname": "%E7%A4%BE%E5%8C%BA%E4%BE%BF%E6%B0%91%E6%9C%8D%E5%8A%A1%E7%B3%BB%E7%BB%9F",
+  "libVersion": "2.23.4",
+  "setting": {
+    "urlCheck": true,
+    "coverView": true,
+    "compileHotReLoad": false,
+    "lazyloadPlaceholderEnable": false,
+    "preloadBackgroundData": false,
+    "autoAudits": false,
+    "useMultiFrameRuntime": true,
+    "showShadowRootInWxmlPanel": true,
+    "useStaticServer": true,
+    "showES6CompileOption": false,
+    "checkInvalidKey": true
+  },
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+}

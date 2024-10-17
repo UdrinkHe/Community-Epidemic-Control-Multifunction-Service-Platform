@@ -1,0 +1,41 @@
+<!--userInfoPages/pages/mainDrugRecord/mainDrugRecord.wxml-->
+<view id="mainContainer">
+<three-type-tips msgShow="{{tipMsgShow}}" msgType="{{tipMsgType}}"></three-type-tips>
+<view class="title">基本信息</view>
+<view class="baseInfo"> 
+  <view class="itemContainer">
+    <view>购买人:</view>
+    <view>{{mainDrugRecord.buyerName}}</view>
+  </view>
+  <view class="itemContainer">
+    <view>电话:</view>
+    <view>{{mainDrugRecord.buyerPhone}}</view>
+  </view>
+  <view class="itemContainer">
+    <view>地址信息:</view>
+    <view>{{mainDrugRecord.address}}</view>
+  </view>
+  <view class="itemContainer">
+    <view>商店名</view>
+    <view>{{mainDrugRecord.storePlace}}</view>
+  </view>
+  <view class="itemContainer">
+    <view>购买时间</view>
+    <view>{{mainDrugRecord.buyTime}}</view>
+  </view>
+</view>
+<view class="title">药品清单</view>
+<view id="drugContainer">
+<block wx:for="{{drugList}}" wx:for-item="itemA">
+<view class="drugItemContainer">
+  <view class="imgContainer">
+    <image style="width: 175rpx;" src="{{itemA.drugInfo.drugImg?itemA.drugInfo.drugImg:normalImg}}" mode="widthFix"></image>
+  </view>
+  <view>
+    <view>{{itemA.drugInfo.drugName}}</view>
+    <view>类型：{{itemA.drugInfo.drugType}}       数量：{{itemA.buyNum}}</view>
+  </view>
+</view>
+</block>
+</view>
+</view>

@@ -1,0 +1,9 @@
+/* volunteerPages/pages/communityPlaceSubmit/communityPlaceSubmit.wxss */
+.radioView{
+  margin-top: 20px;
+  text-align: left;
+}
+#sumbitButton
+{
+  margin-top: 15px;
+}

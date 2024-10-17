@@ -1,0 +1,55 @@
+{
+  "_from": "distance.js",
+  "_id": "distance.js@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-V+MILB2b8IJ/fCVYE/lg5neQrJ/yOL0OgpVMP19hREUClQbW/KmVoOMUAiHBxIsbjIluYHRH1zXs5QvBZ1SGxw==",
+  "_location": "/distance.js",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "distance.js",
+    "name": "distance.js",
+    "escapedName": "distance.js",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmmirror.com/distance.js/-/distance.js-1.0.0.tgz",
+  "_shasum": "15654200184fd5abb9d93a9023b2f0f1806033bf",
+  "_spec": "distance.js",
+  "_where": "D:\\大学用\\编程学习\\node.js学习\\node入门\\基本功能测试",
+  "author": {
+    "name": "Ness López",
+    "email": "n@wingo.io"
+  },
+  "bugs": {
+    "url": "https://github.com/nesslopz/distance.js/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A simple module to calc distance between 2 points using coords. Originally cloned from https://gist.github.com/1604972.",
+  "homepage": "https://github.com/nesslopz/distance.js",
+  "keywords": [
+    "distance",
+    "coords",
+    "calc",
+    "latitude",
+    "longitude"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "distance.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nesslopz/distance.js.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

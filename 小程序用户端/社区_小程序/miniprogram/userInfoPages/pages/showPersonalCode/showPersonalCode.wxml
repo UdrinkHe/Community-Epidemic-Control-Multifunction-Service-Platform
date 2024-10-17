@@ -1,0 +1,24 @@
+<!--userInfoPages/pages/showPersonalCode/showPersonalCode.wxml-->
+<!--用户取件码-->
+<three-type-tips msgShow="{{tipMsgShow}}" msgType="{{tipMsgType}}"></three-type-tips>
+<view id="mainView" style="height: {{mainHeight}};">
+  <view id="contentContainer" style="margin-top:{{contentCenterPX}}">
+  <view id="topBlock">
+    <view id="firstTitle">{{communityName}}取件码</view>
+  </view>
+  <view id="buttomBlock">
+    <view id="placeName">存放点:{{placeName}}</view>
+    <view>
+      <view id="codeShowerContainer">
+        <canvas canvas-id="codeShower" id="codeShower"></canvas>
+      </view>
+    </view>
+    <view id="secondTitle">【编号:{{recordId}}】</view>
+    <view>----------------------</view>
+    <view id="tipBlock">
+      <view id="tiptextOne">请将此码出示给存放点的社区工作者，在工作者的协助下取出物品</view>
+      <view id="tiptextTwo">取件码24小时失效，请尽快取出物品！</view>
+    </view>
+  </view>
+  </view>
+</view>

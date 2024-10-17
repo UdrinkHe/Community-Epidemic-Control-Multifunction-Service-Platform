@@ -1,0 +1,12 @@
+/* userInfoPages/pages/noticeMain/noticeMain.wxss */
+#noticeTitle{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+  word-break:keep-all;
+  white-space:nowrap;
+}
+#contentContainer
+{
+  height: calc(100% - 100px);
+}

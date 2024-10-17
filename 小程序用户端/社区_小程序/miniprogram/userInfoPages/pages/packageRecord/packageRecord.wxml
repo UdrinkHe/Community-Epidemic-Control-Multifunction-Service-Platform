@@ -1,0 +1,39 @@
+<!--userInfoPages/pages/packageRecord/packageRecord.wxml-->
+<!--用户查看取物记录-->
+<three-type-tips msgShow="{{tipMsgShow}}" msgType="{{tipMsgType}}"></three-type-tips>
+<view id="selecterContainer">
+  <view id="selecter" bindtap="showOrhideSelectBar">
+    <view id="selectContent">{{typeName}}</view>
+    <view id="selectIcon"><image src="../../../images/selectArrow.png" style="width: 50rpx;" mode="widthFix"></image></view>
+  </view>
+  <view id="selectItemBar" style="display:{{selectDisplay}};">
+      <view wx:for="{{selectItems}}" wx:for-index="idA" class="{{selectItems[idA].isChoose?'selectItemChoose':'selectItem'}}" wx:key="key" data-queryvalue="{{selectItems[idA].value}}" bindtap="selectThisTypeInfo">--{{selectItems[idA].name}}--</view>
+  </view>
+</view>
+<view id="mainContainer" style="height:100vh;">
+  <scroll-view id="recordContainer">
+    <block wx:for="{{recordList}}" wx:for-item="itemA">
+      <view class="itemContainer" data-recordid="{{itemA._id}}" bindtap="{{typeValue==0?'showPackageCode':null}}">
+        <view class="firstContainer">
+          地址信息
+          <view class="textContainer">存放社区:{{itemA.communityName}}</view>
+          <view class="textContainer">详细地址:{{itemA.address}}</view>
+        </view>
+        <view class="firstContainer">
+          存件工作者信息
+          <view class="textContainer">存件人:{{itemA.workerName}}</view>
+          <view class="textContainer">联系电话:{{itemA.workerPhone}}</view>
+        </view>
+        <view class="firstContainer">
+          备注：
+          <view class="textContainer">{{itemA.content}}</view>
+        </view>
+        <view class="firstContainer">
+          操作时间
+          <view class="textContainer">存放时间:{{itemA.createTime}}</view>
+          <view  class="textContainer" wx:if="{{typeValue==1}}">取出时间:{{itemA.scanTime}}</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

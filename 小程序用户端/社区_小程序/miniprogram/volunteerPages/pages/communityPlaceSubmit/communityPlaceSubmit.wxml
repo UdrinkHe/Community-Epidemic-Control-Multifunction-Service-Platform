@@ -1,0 +1,31 @@
+<!--volunteerPages/pages/communityPlaceSubmit/communityPlaceSubmit.wxml-->
+<!--三种类型的提示toptips-->
+<mp-toptips msg="{{errMsg}}" type="error" show="{{errMsgShow}}" delay="2000"></mp-toptips>
+<mp-toptips msg="{{successMsg}}" type="success" show="{{successMsgShow}}" delay="2000"></mp-toptips>
+<mp-toptips msg="{{infoMsg}}" type="info" show="{{infoMsgShow}}" delay="2000"></mp-toptips>
+<!--用于更改站点类型的对话框-->
+<mp-dialog id="occupationChoose" mask-closable="{{false}}"
+    buttons="{{placeTypeDialogButtons}}" show="{{dialogShow}}" bindbuttontap="tapDialogButton">
+        <view>
+        站点类型
+            <radio-group bindchange="changeMyPlaceType">
+                <block wx:for="{{placeTypeValue}}" wx:key="value" wx:for-index="idxA" wx:for-item="itemA">
+                  <view class="radioView"><radio value="{{idxA}}">{{itemA.showValue}}</radio></view>
+                </block>
+            </radio-group>
+        </view>
+    </mp-dialog>
+<!--用于社区工作者上报地点-->
+<mp-form-page title="社区工作者地点上报">
+  <mp-form>
+    <mp-cells title="地点信息">
+      <mp-cell title="站点地址名">
+        <view><input placeholder="请输入详细地址" model:value="{{placeAddress}}"/></view>
+      </mp-cell>
+      <mp-cell title="站点类型" link="{{true}}" bindtap="openPlaceChangeDialog">
+        <view>{{placeTypeName}}</view>
+      </mp-cell>
+    </mp-cells>
+  </mp-form>
+  <button type="primary" bindtap="submitThisPlace" id="sumbitButton">提交</button>
+</mp-form-page>

@@ -1,0 +1,128 @@
+/* volunteerPages/pages/myPlaceInfo/myPlaceInfo.wxss */
+#selecterContainer
+{
+  position: absolute;
+  width: 750rpx;
+  height: 50rpx;
+  z-index: 3;
+}
+#selecter
+{
+  width: 350rpx;
+  height: 50rpx;
+  background: rgb(214, 211, 211);
+  position: relative;
+  left: 200rpx;
+  display: flex;
+  border-radius: 25rpx;
+}
+#selectContent
+{
+  font-size: 35rpx;
+  line-height: 50rpx;
+  width: 300rpx;
+  text-align: center;
+  border-radius: 25rpx;
+}
+#selectIcon
+{
+  width: 50rpx;
+  border-radius: 25rpx;
+}
+#contentContainer
+{
+  width: 750rpx;
+  position: absolute;
+  top:60rpx;
+  z-index: 2;
+}
+#selectItemBar
+{
+  position: relative;
+  width: 350rpx;
+  background-color: white;
+  left: 200rpx;
+  top: 0rpx;
+}
+.selectItem
+{
+  height: 50rpx;
+  font-size: 35rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-bottom: 2px solid;
+}
+.selectItemChoose
+{
+  height: 50rpx;
+  font-size: 35rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-bottom: 2px solid;
+  background-color: blue;
+}
+.flexBar
+{
+  display: flex;
+  justify-content: center;
+}
+.barItem
+{
+  float: left;
+  width: 175rpx;
+  height: 50rpx;
+  font-size: 35rpx;
+  line-height: 50rpx;
+  background-color: cornflowerblue;
+  text-align: center;
+}
+#totalBar
+{
+  clear: both;
+  width: 350rpx;
+  height: 10rpx;
+  background-color: darkgray;
+}
+#sonBar
+{
+  background-color: green;
+  width: 175rpx;
+  height: 100%;
+}
+#placeContent
+{
+  width: 1500rpx;
+  display: flex;
+  height: 500px;
+  overflow-x: hidden;
+  padding-top: 1rpx;
+}
+.placeSon
+{
+  width: 750rpx;
+  background-color: blueviolet;
+}
+#placeSonF
+{
+  background-color: brown;
+}
+#placeBlock
+{
+  height: 120rpx;
+  background-color: pink;
+  position: absolute;
+  width: 750rpx;
+}
+.placeItem
+{
+  border-bottom: 2px black solid;
+  background-color: white;
+}
+#itemFirst
+{
+  margin-top: 120rpx;
+}
+#itemFirstz
+{
+  margin-top: 120rpx;
+}
