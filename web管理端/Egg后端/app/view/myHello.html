@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>我的post测试页面</div>
+    <div>
+        <div>1.输入CommunitId获取所有居民的信息</div>
+        <form method='post' action='/getAllPersonalInfo'>
+            <input type="text" name="communityId">
+            <button>添加</button>
+        </form>
+    </div>
+    <div>
+        <div>2.输入openid和信息登记level来修改小程序用户的等级信息</div>
+        <form method='post' action='/setUserStatusById'>
+            <input type="text" name="userId" placeholder="请输入用户openid">
+            <input type="number" name="level" placeholder="请输入信息状态等级">
+            <button>修改</button>
+        </form>
+    </div>
+    <div>
+        <div>3.查询所有药品信息</div>
+        <form method='post' action='/addANotice'>
+            <input type="text" name="communityId" placeholder="请输入社区id">
+            <button>查询</button>
+        </form>
+    </div>
+    <div>
+        <div>4.判断登录信息</div>
+        <form method='post' action='/login'>
+            <input type="text" name="username" placeholder="请输入用户名">
+            <input type="text" name="password" placeholder="请输入密码">
+            <button>登录</button>
+        </form>
+    </div>
+    <div>
+        <div>5.中间件测试</div>
+        <form method='post' action='/testJwt'>
+            <button>测试</button>
+        </form>
+    </div>
+    <div>
+        <div>6.查看社区内所有购药记录</div>
+        <form method='post' action='/selectAllDrugRecord'>
+            <input type="text" name="communityId" placeholder="请输入社区id">
+            <button>测试</button>
+        </form>
+    </div> 
+    <div>
+        <div>7.查看一条购药记录的详情信息</div>
+        <form method='post' action='/showMainDrugRecord'>
+            <input type="text" name="entranceId" placeholder="请输入购药记录id">
+            <button>测试</button>
+        </form>
+    </div>
+    <div>
+        <div>8.审核一条购药记录</div>
+        <form method='post' action='/setDrugRecordStatus'>
+            <input type="text" name="entranceId" placeholder="请输入购药记录id">
+            <button>测试</button>
+        </form>
+    </div>
+</body>
+</html>
